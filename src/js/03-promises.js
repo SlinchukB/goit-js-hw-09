@@ -14,7 +14,7 @@ function onFormSubmit(e) {
   const firsrTimer = setTimeout(() => {
     for (let i = 0; i < amount.value; i += 1) {
       const s = +delay.value + +step.value * i;
-      position = i + 1;
+      const position = i + 1;
       createPromise(position, s)
         .then(({ position, delay }) => {
           console.log(`✅ Fulfilled promise ${position} in ${delay} ms`);
